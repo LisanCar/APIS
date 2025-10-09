@@ -1,0 +1,80 @@
+@import url('https://fonts.cdnfonts.com/css/simpsonfont');
+#display{
+    background-color: grey;
+    margin:16px
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 6px;
+  background:
+    conic-gradient(from 135deg at top,currentColor 90deg, #0000 0) 0 calc(50% - 4px)/17px 8.5px,
+    radial-gradient(farthest-side at bottom left,#0000 calc(100% - 6px),currentColor calc(100% - 5px) 99%,#0000) top right/50%  50% content-box content-box,
+    radial-gradient(farthest-side at top        ,#0000 calc(100% - 6px),currentColor calc(100% - 5px) 99%,#0000) bottom   /100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation: l11 1s infinite linear;
+}
+@keyframes l11{ 
+  100%{transform: rotate(1turn)}
+}
+
+body{
+  background-image: url('https://thesimpsonsapi.com/clouds-bg.jpg');
+  font-family: 'Simpsonfont', sans-serif;
+}
+#character1{
+  color: black;
+  background-color: white;
+}
+button{
+  display: block;
+  margin: 0 auto;
+  background: #ffd90f;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.character-container {
+  width: calc(33.33% - 20px);
+  min-width: 200px;
+  text-align: center;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-decoration: solid;
+}
+
+.character-container img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+}
